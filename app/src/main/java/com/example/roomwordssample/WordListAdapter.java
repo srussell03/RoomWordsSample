@@ -20,6 +20,10 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
         mInflater = LayoutInflater.from(context);
     }
 
+    public Word getWordAtPosition (int position) {
+        return mWords.get(position);
+    }
+
     @Override
     public WordViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = mInflater.inflate(R.layout.recyclerview_item, parent, false);
